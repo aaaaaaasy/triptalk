@@ -1,0 +1,109 @@
+.section {
+  width: calc(100% - 40px);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 0 0;
+}
+
+.profileCard {
+  display: flex;
+  padding: 36px 40px;
+  align-items: center;
+  gap: 24px;
+  border-radius: 16px;
+  background: var(--gray-100);
+}
+
+.avatar {
+  display: flex;
+  width: 84px;
+  height: 84px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+  font-size: 36px;
+}
+
+.info {
+  min-width: 0;
+  flex: 1;
+}
+
+.info h1 {
+  margin: 0 0 6px;
+  color: var(--black);
+  font-size: 22px;
+  letter-spacing: -0.5px;
+}
+
+.email {
+  margin: 0 0 4px;
+  color: var(--gray-900);
+  font-size: 14px;
+}
+
+.joinedAt {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 12px;
+}
+
+.editButton {
+  flex-shrink: 0;
+  height: 42px;
+  padding: 0 22px;
+  border: 1px solid var(--gray-300);
+  border-radius: 21px;
+  color: var(--black);
+  background: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.statList {
+  display: grid;
+  margin-top: 24px;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.statBox {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--gray-300);
+  border-radius: 12px;
+}
+
+.statBox strong {
+  color: var(--black);
+  font-size: 24px;
+}
+
+.statBox span {
+  color: var(--gray-600);
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .section {
+    width: calc(100% - 28px);
+    padding-top: 40px;
+  }
+
+  .profileCard {
+    flex-wrap: wrap;
+    padding: 28px 24px;
+  }
+
+  .editButton {
+    width: 100%;
+  }
+
+  .statList {
+    grid-template-columns: 1fr;
+  }
+}

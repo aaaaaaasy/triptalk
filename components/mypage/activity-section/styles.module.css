@@ -1,0 +1,162 @@
+.section {
+  width: calc(100% - 40px);
+  max-width: var(--max-width);
+  min-height: 420px;
+  margin: 0 auto;
+  padding: 40px 0 100px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 24px;
+  gap: 8px;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.tab {
+  position: relative;
+  height: 48px;
+  padding: 0 6px;
+  color: var(--gray-600);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tabActive {
+  color: var(--black);
+}
+
+.tabActive::after {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--black);
+  content: "";
+}
+
+.boardList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.boardRow {
+  display: flex;
+  padding: 18px 4px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.boardTitle {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--black);
+  font-size: 15px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.boardMeta {
+  flex-shrink: 0;
+  color: var(--gray-600);
+  font-size: 12px;
+}
+
+.reservationList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reservationCard {
+  display: flex;
+  padding: 22px 26px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid var(--gray-300);
+  border-radius: 12px;
+}
+
+.reservationLocation {
+  margin: 0 0 6px;
+  color: var(--gray-600);
+  font-size: 12px;
+}
+
+.reservationInfo h3 {
+  margin: 0 0 6px;
+  color: var(--black);
+  font-size: 16px;
+}
+
+.reservationDate {
+  margin: 0;
+  color: var(--gray-600);
+  font-size: 13px;
+}
+
+.reservationRight {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.statusActive {
+  color: var(--blue);
+  background: #e8f0fe;
+}
+
+.statusDone {
+  color: var(--gray-600);
+  background: var(--gray-100);
+}
+
+.statusCanceled {
+  color: #e0453c;
+  background: #fdeceb;
+}
+
+.reservationPrice {
+  margin: 0;
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.empty {
+  padding: 80px 0;
+  color: var(--gray-600);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .section {
+    width: calc(100% - 28px);
+  }
+
+  .reservationCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reservationRight {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,94 @@
+.header {
+  position: relative;
+  z-index: 10;
+  height: 80px;
+  background: #ffffff;
+}
+
+.inner {
+  display: flex;
+  width: calc(100% - 40px);
+  max-width: var(--max-width);
+  height: 80px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+  margin-right: 38px;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.navigation {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  gap: 38px;
+  color: #555555;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.navigation a {
+  display: flex;
+  position: relative;
+  height: 80px;
+  align-items: center;
+}
+
+.navigation .active {
+  color: var(--black);
+  font-weight: 800;
+}
+
+.navigation .active::after {
+  position: absolute;
+  right: 0;
+  bottom: 18px;
+  left: 0;
+  height: 2px;
+  background: var(--black);
+  content: "";
+}
+
+.loginButton {
+  display: flex;
+  width: 104px;
+  height: 42px;
+  margin-left: auto;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 22px;
+  color: #ffffff;
+  background: var(--black);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.loginButton span {
+  font-size: 22px;
+  line-height: 1;
+}
+
+@media (max-width: 760px) {
+  .inner {
+    width: calc(100% - 28px);
+  }
+
+  .logo {
+    margin-right: 24px;
+  }
+
+  .navigation {
+    gap: 20px;
+  }
+
+  .navigation a:nth-child(3) {
+    display: none;
+  }
+}
